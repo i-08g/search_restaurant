@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 import random
 
-dinner_type = ['洋', '和', '中']
-random.shuffle(dinner_type)
-print(dinner_type[0])
+f = open('restaurant.txt', 'r')
+
+list = f.readlines() #リストとして読み込む
+
+random.shuffle(list)
+print(list[0])
+
+f.close()
